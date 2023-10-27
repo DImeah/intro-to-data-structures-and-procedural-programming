@@ -23,4 +23,6 @@ Write an algorithm which determines, for n pairs of given vectors, whether two v
 4. Lines 9 calls a product_of_vectors function that receives 2 arguments of type array.
 5. Lines 14 defines a function product_of_vectors that receives 2 parameters of type array.
 6. Lines 16 defines local variables in the function.
-7. Lines
+7. Lines 20 checks if the arrays passed have the same length.
+8. Lines 25 iterates through the arrays set by the user using a for loop, sums and stores the value of the multiplication of the array into a variable ps.
+9. Lines 29 returns ps
