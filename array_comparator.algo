@@ -1,0 +1,49 @@
+ALGORITHM find_distinct_sum ()
+VAR
+   set1: ARRAY_OF INTEGER[100];  // Use dynamic arrays for Set 1 with limit of arrray as 100 
+   set2: ARRAY_OF INTEGER[100];  // Use dynamic arrays for Set 2 with limit of arrray as 100 
+   distinct_elements: ARRAY_OF INTEGER[100];  // Use a dynamic array for distinct elements with limit of arrray as 100 
+   i, j, k: INTEGER;
+   sum: INTEGER;
+BEGIN
+   sum := 0; // Initialize sum to zero
+
+   // Input for Set 1
+   Read(set1);  // Insert elements from the user, or read them from an input source
+
+   // Input for Set 2
+   Read(set2);  // Insert elements from the user, or read them from an input source
+
+   // Combine elements from Set 1 and Set 2 into the distinct_elements array
+   FOR i FROM 0 TO set1.length - 1 STEP 1 DO
+    FOR j FROM 0 TO set2.length - 1 STEP 1 DO
+        IF (set1[i]=set2[j]) THEN
+            BREAK; 
+            ELSE 
+            j++; 
+        END_IF
+        distinct_elements = set1[i]  // Place the distinct elements found in the set into the distinct_elements array
+    END_FOR
+
+    FOR j FROM 0 TO set2.length - 1 STEP 1 DO
+     FOR i FROM 0 TO set1.length - 1 STEP 1  DO
+        IF (set2[j]=set1[1]) THEN
+            BREAK; //
+            ELSE 
+            i++; //
+        END_IF
+        distinct_elements = set2[j]  // Place the distinct elements found in the set into the distinct_elements array
+     END_FOR
+        
+    END_FOR
+
+      
+   // Calculate the sum of distinct elements
+   FOR k FROM 1 TO distinct_elements.length - 1 STEP 1 DO
+       sum := sum + distinct_elements[k];
+   END_FOR
+
+   // Output the sum
+   Write("The sum of distinct elements is ", sum);
+END
+
