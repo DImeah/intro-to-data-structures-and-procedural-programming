@@ -11,7 +11,7 @@ END
 
 
 // create a funtion called dot_product that takes in parameters of type array of the same length
-FUNCTION product_of_vectors(v1, v2) : INTEGER
+FUNCTION product_of_vectors(v1, v2) : ARRAY_OF INTEGER
 VAR
     i, ps: INTEGER = 0;
 BEGIN
